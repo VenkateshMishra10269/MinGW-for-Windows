@@ -1,1 +1,55 @@
 #Tiny C Compiler on Windows
+1. Downlod the tcc-0.9.27-win64-bin.zip file.
+2. Create a folder in your C drive named "tcc"
+3. Move the tcc-0.9.27-win64-bin.zip file to the "tcc" folder.
+4. Extract tcc-0.9.27-win64-bin.zip file.
+5. There will be a "tcc" folder in our "tcc" folder.
+6. Open the "tcc" folder inside out folder.
+7. Copy the path and set it as your system environment variable.
+8. Open "cmd" nd type tcc.
+You should see the output as:
+    Tiny C Compiler 0.9.27 - Copyright (C) 2001-2006 Fabrice Bellard
+Usage: tcc [options...] [-o outfile] [-c] infile(s)...
+       tcc [options...] -run infile [arguments...]
+General options:
+  -c          compile only - generate an object file
+  -o outfile  set output filename
+  -run        run compiled source
+  -fflag      set or reset (with 'no-' prefix) 'flag' (see tcc -hh)
+  -Wwarning   set or reset (with 'no-' prefix) 'warning' (see tcc -hh)
+  -w          disable all warnings
+  -v -vv      show version, show search paths or loaded files
+  -h -hh      show this, show more help
+  -bench      show compilation statistics
+  -           use stdin pipe as infile
+  @listfile   read arguments from listfile
+Preprocessor options:
+  -Idir       add include path 'dir'
+  -Dsym[=val] define 'sym' with value 'val'
+  -Usym       undefine 'sym'
+  -E          preprocess only
+Linker options:
+  -Ldir       add library path 'dir'
+  -llib       link with dynamic or static library 'lib'
+  -r          generate (relocatable) object file
+  -shared     generate a shared library/dll
+  -rdynamic   export all global symbols to dynamic linker
+  -soname     set name for shared library to be used at runtime
+  -Wl,-opt[=val]  set linker option (see tcc -hh)
+Debugger options:
+  -g          generate runtime debug info
+  -b          compile with built-in memory and bounds checker (implies -g)
+  -bt N       show N callers in stack traces
+Misc. options:
+  -x[c|a|n]   specify type of the next infile
+  -nostdinc   do not use standard system include paths
+  -nostdlib   do not link with standard crt and libraries
+  -Bdir       set tcc's private include/library dir
+  -MD         generate dependency file for make
+  -MF file    specify dependency file name
+  -m32/64     defer to i386/x86_64 cross compiler
+Tools:
+  create library  : tcc -ar [rcsv] lib.a files
+  create def file : tcc -impdef lib.dll [-v] [-o lib.def]
+
+
